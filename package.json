@@ -25,5 +25,8 @@
   "devDependencies": {
     "aws-sdk": "2.224.1"
   },
+  "files": [
+    "src"
+  ],
   "license": "Apache-2.0"
 }
