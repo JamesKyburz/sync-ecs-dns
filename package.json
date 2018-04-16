@@ -1,0 +1,28 @@
+{
+  "name": "sync-ecs-dns",
+  "version": "0.0.1",
+  "description": "sync route53 from ecs cloudfront events",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/JamesKyburz/sync-ecs-dns.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "ecs",
+    "route53",
+    "serverless",
+    "cloudfront",
+    "dns"
+  ],
+  "dependencies": {
+    "lodash.get": "4.4.2",
+    "run-duck-run": "2.0.3"
+  },
+  "scripts": {
+    "missing": "npx --ignore-existing dependency-sync ./src/index.js --debug --once"
+  },
+  "devDependencies": {
+    "aws-sdk": "2.224.1"
+  }
+}
