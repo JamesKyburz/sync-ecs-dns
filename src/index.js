@@ -77,12 +77,12 @@ exports.sync = (event, context, callback) => {
 
       if (
         route53Changes.length === 2 &&
-        route53Changes[0].ResourceRecordSet.ResourceRecords
-          .map(x => x.Value)
-          .toString() ===
-          route53Changes[1].ResourceRecordSet.ResourceRecords
-            .map(x => x.Value)
-            .toString()
+        route53Changes[0].ResourceRecordSet.ResourceRecords.map(
+          x => x.Value
+        ).toString() ===
+          route53Changes[1].ResourceRecordSet.ResourceRecords.map(
+            x => x.Value
+          ).toString()
       ) {
         return
       }
@@ -107,6 +107,7 @@ exports.sync = (event, context, callback) => {
     },
     err => {
       if (err) console.log(JSON.stringify({ err, event }))
+      callback()
     }
   )()
 }
