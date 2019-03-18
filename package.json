@@ -1,6 +1,6 @@
 {
   "name": "sync-ecs-dns",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "sync route53 from ecs cloudfront events",
   "repository": {
     "type": "git",
