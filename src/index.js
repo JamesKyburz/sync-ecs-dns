@@ -1,4 +1,5 @@
-const AWS = require('aws-sdk')
+const ECS = require('aws-sdk/clients/ecs')
+const Route53 = require('aws-sdk/clients/route53')
 const get = require('lodash.get')
 
 exports.sync = async event => {
@@ -6,8 +7,8 @@ exports.sync = async event => {
     const { group, clusterArn: cluster } = get(event, 'detail', {})
     if (!group || !cluster) return
 
-    const ecs = new AWS.ECS()
-    const route53 = new AWS.Route53()
+    const ecs = new ECS()
+    const route53 = new Route53()
 
     const zoneId = get(
       await route53
