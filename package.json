@@ -22,7 +22,7 @@
     "missing": "npx --ignore-existing dependency-sync ./src/index.js --debug --once"
   },
   "devDependencies": {
-    "aws-sdk": "2.423.0"
+    "aws-sdk": "2.807.0"
   },
   "files": [
     "src"
